@@ -25,16 +25,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        
-
-
-
-
-
-        //a.add(0);
-
-
         textView = (TextView)findViewById(R.id.textView1);
         //textView.setMovementMethod(new ScrollingMovementMethod());
         //textView.setSelected(true);
@@ -62,100 +52,80 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        one.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        one.setOnClickListener(view -> {
                 ans+="1";
                 textView.setText(textView.getText() + "1");
 
-            }
+            
         });
 
-        two.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        two.setOnClickListener(view ->  {
                 ans+="2";
 
                 textView.setText(textView.getText() + "2");
 
-            }
+            
         });
 
-        three.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        three.setOnClickListener(view -> {
                 ans+="3";
 
                 textView.setText(textView.getText() + "3");
 
-            }
+            
         });
 
-        four.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        four.setOnClickListener(view -> {
                 ans+="4";
 
                 textView.setText(textView.getText() + "4");
 
-            }
+            
         });
 
-        five.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        five.setOnClickListener(view -> {
                 ans+="5";
 
                 textView.setText(textView.getText() + "5");
 
-            }
+            
         });
 
 
-        six.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        six.setOnClickListener(view -> {
                 ans+="6";
 
                 textView.setText(textView.getText() + "6");
 
-            }
+            
         });
 
 
-        seven.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        seven.setOnClickListener(view -> {
                 ans+="7";
 
                 textView.setText(textView.getText() + "7");
 
-            }
+            
         });
 
-        eight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        eight.setOnClickListener(view -> {
                 ans+="8";
 
                 textView.setText(textView.getText() + "8");
 
-            }
+            
         });
 
-        nine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        nine.setOnClickListener(view -> {
                 ans+="9";
 
                 textView.setText(textView.getText() + "9");
 
-            }
+            
         });
 
-        point.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        point.setOnClickListener(view -> {
                 if(!textView.getText().toString().isEmpty())
                 {
                     String s = textView.getText().toString();
@@ -169,34 +139,26 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
-            }
+            
         });
 
-        zero.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        zero.setOnClickListener(view -> {
                 ans+="0";
 
                 textView.setText(textView.getText() + "0");
 
-            }
+            
         });
 
 
-        clear.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
+        clear.setOnClickListener(view -> {
                 ans="";
                 textView.setText(null);
                 a.clear();
-            }
+            
         });
 
-        delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        delete.setOnClickListener(view -> {
                 if(!textView.getText().toString().isEmpty())
                 {
                     String s = textView.getText().toString();
@@ -211,23 +173,19 @@ public class MainActivity extends AppCompatActivity {
                     textView.setText(s1);
                 }
 
-            }
+            
         });
 
-        minusValue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        minusValue.setOnClickListener(
                 String s = textView.getText().toString();
                 double res = Double.parseDouble(s + "");
                 res*=-1;
                 ans=String.valueOf(res);
                 textView.setText(res + "");
-            }
+            
         });
 
-        percentage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        percentage.setOnClickListener(view -> {
                 if(!textView.getText().toString().isEmpty())
                 {
                     String s = textView.getText().toString();
@@ -241,12 +199,10 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
-            }
+            
         });
 
-        divide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        divide.setOnClickListener(view -> {
                 if(!textView.getText().toString().isEmpty())
                 {
                     String s = textView.getText().toString();
@@ -257,12 +213,10 @@ public class MainActivity extends AppCompatActivity {
                         textView.setText(textView.getText() + "/");
                     }
                 }
-            }
+            
         });
 
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        add.setOnClickListener(view -> {
                 if(!textView.getText().toString().isEmpty())
                 {
                     String s = textView.getText().toString();
@@ -273,12 +227,10 @@ public class MainActivity extends AppCompatActivity {
                         textView.setText(textView.getText() + "+");
                     }
                 }
-            }
+            
         });
 
-        subtract.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        subtract.setOnClickListener(
                 if(!textView.getText().toString().isEmpty())
                 {
                     String s = textView.getText().toString();
@@ -289,12 +241,10 @@ public class MainActivity extends AppCompatActivity {
                         textView.setText(textView.getText() + "-");
                     }
                 }
-            }
+            
         });
 
-        multiply.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        multiply.setOnClickListener(
                 if(!textView.getText().toString().isEmpty())
                 {
                     String s = textView.getText().toString();
@@ -307,12 +257,10 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
-            }
+            
         });
 
-        equal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        equal.setOnClickListener(view -> {
                 if(!textView.getText().toString().isEmpty())
                 {
                     String s = ans;
@@ -371,7 +319,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
-            }
+            
         });
 
 
